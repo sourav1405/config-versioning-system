@@ -1,0 +1,75 @@
+/* Page container */
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: Arial, sans-serif;
+}
+
+/* Headings */
+h2 {
+    color: black;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #0d0d0d;
+  padding-bottom: 6px;
+}
+
+/* Buttons */
+button {
+  padding: 8px 14px;
+  margin: 8px 8px 8px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #1d4ed8;
+}
+
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Reset button */
+button.reset {
+  background-color: #6b7280;
+}
+
+button.reset:hover {
+  background-color: #4b5563;
+}
+
+/* Message */
+.message {
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Version section */
+.version-section {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+
+}
+
+/* Compare actions */
+.actions {
+  margin-top: 12px;
+}
+
+/* Diff section */
+.diff-section {
+  margin-top: 24px;
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+}

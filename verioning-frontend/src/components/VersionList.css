@@ -1,0 +1,77 @@
+.version-container {
+  display: flex;
+  gap: 30px;
+  font-family: Arial, sans-serif;
+  border: black;
+}
+
+.version-list {
+  list-style: none;
+  padding: 0;
+  width: 220px;
+}
+
+.version-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  margin-bottom: 6px;
+  border: 1px solid #0f0e0e;
+  border-radius: 6px;
+}
+
+.version-id {
+    color: black;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.from-btn {
+  background-color: #47a6ea;
+}
+
+.to-btn {
+  background-color: #f395b4;
+}
+
+.btn.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.selection-box {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  border: 2px dashed #aaa;
+  padding: 15px;
+  width: 120px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.column h4 {
+  margin-bottom: 10px;
+  color: black;
+}
+
+.value {
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+}
