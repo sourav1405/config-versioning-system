@@ -13,7 +13,6 @@ export default function DiffViewer({
     <div>
       {show && (
         <div className="diff-container">
-          {"hi"}
           {/* JSON Diff */}
           <ReactDiffViewer
             oldValue={JSON.stringify(leftJson, null, 2)}

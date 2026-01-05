@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function ConfigEditor({ config, setConfig }) {
+export default function ConfigEditor({ config, setConfig,setDisable }) {
   const [text, setText] = useState("");
   const [error, setError] = useState(null);
 
@@ -12,12 +12,13 @@ export default function ConfigEditor({ config, setConfig }) {
   const handleChange = (e) => {
     const value = e.target.value;
     setText(value);
-
+    setDisable(false);
     try {
       const parsed = JSON.parse(value);
       setConfig(parsed);
       setError(null);
     } catch (err) {
+      setDisable(true);
       setError("Invalid JSON");
     }
   };

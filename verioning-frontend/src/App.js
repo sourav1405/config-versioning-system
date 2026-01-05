@@ -21,6 +21,7 @@ export default function App() {
   const [leftJson, setLeftJson] = useState(null);
   const [rightJson, setRightJson] = useState(null);
   const [diffReady, setDiffReady] = useState(false);
+  const[disable,setDisable]=useState(false);
 
   useEffect(() => {
     fetchConfig().then(setConfig);
@@ -92,7 +93,9 @@ export default function App() {
       setLoading(true);
       setMessage(null);
       setError(false);
-
+      if(!config){
+        alert("Please enter the value");
+      }
       const response = await fetch(`http://localhost:4000/config/save`, {
         method: "POST",
         headers: {
@@ -110,7 +113,7 @@ export default function App() {
     } catch (err) {
       console.error("saveConfig error:", err);
       setError(true);
-      setMessage("❌ Failed to save config");
+      setMessage(err.message);
     } finally {
       setLoading(false);
       setFetchAll(!fetchAll);
@@ -125,9 +128,9 @@ export default function App() {
     <div className="app-container">
       <h2>Config Editor</h2>
 
-      <ConfigEditor config={config} setConfig={setConfig} />
+      <ConfigEditor config={config} setConfig={setConfig} setDisable={setDisable} />
 
-      <button onClick={saveConfig} disabled={loading}>
+      <button onClick={saveConfig} disabled={disable}>
         {loading ? "Saving..." : "Save"}
       </button>
 
